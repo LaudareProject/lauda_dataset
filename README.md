@@ -1,116 +1,60 @@
 
-# 🎼 Lauda Manuscript Dataset & OMR Learning Pipeline
+Lauda Manuscript Codebase & OMR Learning Pipeline
 
-This repository accompanies the **Lauda Medieval Music Dataset** and the related learning experiments described in our IEEE MLSP 2025 paper:
+This repository accompanies the learning experiments described in our IEEE MLSP 2025 paper:
 
-> 📝 **Experimenting Active and Sequential Learning in a Medieval Music Manuscript**  
-> *Sachin Sharma, Federico Simonetta, Michele Flammini*  
-> GSSI – Gran Sasso Science Institute, L’Aquila, Italy  
-> 📅 Accepted at **IEEE MLSP 2025**  
-> 🎨 *Special Session: Applications of AI in Cultural and Artistic Heritage*
+📝 Experimenting Active and Sequential Learning in a Medieval Music Manuscript  
+Sachin Sharma, Federico Simonetta, Michele Flammini  
+GSSI – Gran Sasso Science Institute, L’Aquila, Italy  
+📅 Accepted at IEEE MLSP 2025  
+🎨 Special Session: Applications of AI in Cultural and Artistic Heritage
 
----
+📁 What This Repository Contains  
+This repository provides Python code used in the MLSP 2025 paper, including:
 
-## 📦 Dataset Access (340 pages)
+✅ YOLOv8-based object detection  
+✅ Active Learning (uncertainty sampling and sequential training)  
+✅ COCO-format preprocessing and splitting tools  
 
-👉 The full dataset is hosted on **Zenodo**, not GitHub:  
-🔗 **[https://zenodo.org/records/15835507](https://zenodo.org/records/15835507)**
+⚠️ **Note:** The dataset used in these experiments is **not yet publicly released**. It will be made available after the conclusion of the LAUDARE ERC Project.
 
-### 📁 Archive contents:
-- 340 high-resolution digitized manuscript pages (`images/`)
-- `annotations/coco_annotations.json` (bounding boxes + class labels)
-- Scripts for dataset splits and learning experiments
-- All code used in the MLSP 2025 paper
+📁 Repository Structure
 
-⚠️ **Note:** GitHub does **not** include image data. Please download from Zenodo.
+│──data_split.py            # Splits dataset into train/val  
+│──Sequential_learning.py   # Sequential baseline training  
+│──Uncertainty_AL.py        # Active learning with uncertainty sampling  
+│──coco_annotations.json    # Sample structure only (no image data)  
+├──LICENSE                  # CC BY 4.0 license  
+└──README.md                # This file
 
----
+🚀 Quick Start
 
-## 🧠 Project Overview
-
-This project explores **Optical Music Recognition (OMR)** and active learning on medieval chant manuscripts using:
-
-- ✅ YOLOv8-based object detection
-- ✅ Active Learning (uncertainty sampling and sequential training)
-- ✅ COCO-format annotations
-
-
----
-
-## 📁 Repository Structure
-
-```
-              
-│──data_split.py            # Splits dataset into train/val
-│──Sequential_learning.py   # Sequential baseline training
-│──Uncertainty_AL.py        # Active learning with uncertainty sampling
-│──coco_annotations.json
-├──LICENSE                     # CC BY 4.0 license
-└── README.md                   # This file
-```
-
----
-
-## 🚀 Quick Start
-
-### 1. Download the Dataset  
-Download and unzip from: [https://zenodo.org/records/15835507](https://zenodo.org/records/15835507)
-
----
-
-### 2. Prepare Dataset Splits
-```bash
-python code/data_split.py
-```
-
----
-
-### 3. Train Sequential Baseline
-```bash
-python code/Sequential_learning.py
-```
-
----
-
-### 4. Run Active Learning Loop
-```bash
-python code/Uncertainty_AL.py
-```
-
----
-
-## 🔧 Requirements
-
-- Python 3.9+
-- [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
-- NumPy, OpenCV, Pandas, Matplotlib, etc.
-
-Install dependencies:
+1. Clone this repository  
+2. Install dependencies  
 ```bash
 pip install -r requirements.txt
-```
+3. Run the scripts as needed for training or evaluation.
 
----
+🔧 Requirements
 
-## 📜 License
+Python 3.9+
 
-This dataset and code are licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).  
-Feel free to use, share, and adapt with proper attribution.
+Ultralytics YOLOv8
 
----
+NumPy, OpenCV, Pandas, Matplotlib, etc.
 
-## 🙏 Acknowledgment
+📜 License
+This code is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+Feel free to use, share, and adapt it with proper attribution.
 
-This work is part of the **LAUDARE ERC Advanced Grant** (Project No. 101054750), funded by the **European Union Horizon Europe Programme (2021–2027)**.
+🙏 Acknowledgment
+This work is part of the LAUDARE ERC Advanced Grant (Project No. 101054750), funded by the European Union Horizon Europe Programme (2021–2027).
 
-> The views and opinions are those of the authors and do not necessarily reflect those of the European Union or the European Research Council.
+The views and opinions expressed are those of the authors and do not necessarily reflect those of the European Union or the European Research Council.
 
----
+📚 Citation
 
-## 📚 Citation
-
-### MLSP 2025 Paper
-```bibtex
+MLSP 2025 Paper
 @inproceedings{sharma2025lauda,
   title     = {Experimenting Active and Sequential Learning in a Medieval Music Manuscript},
   author    = {Sharma, Sachin and Simonetta, Federico and Flammini, Michele},
@@ -119,24 +63,12 @@ This work is part of the **LAUDARE ERC Advanced Grant** (Project No. 101054750),
   institution = {Gran Sasso Science Institute (GSSI), L’Aquila, Italy},
   note      = {Special Session: Applications of AI in Cultural and Artistic Heritage}
 }
-```
 
-### Zenodo Dataset
-```bibtex
-@dataset{sharma_2025_15835507,
-  author       = {Sharma, Sachin Umesh},
-  title        = {Laudare Medieval OMR Dataset and Code},
-  year         = 2025,
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.15835507},
-  url          = {https://doi.org/10.5281/zenodo.15835507}
-}
-```
-
----
+📦 Dataset Access  
+The full dataset (340 high-resolution manuscript pages with COCO-format annotations) is **not yet released**.  
+We will upload it to Zenodo after the LAUDARE project ends.
 
 ## 📌 Links
 
-- 📦 **Zenodo Archive**: https://zenodo.org/records/15835507  
 - 🧠 **LAUDARE Project Info**: [https://laudare.eu/]  
 - 🏛️ **GSSI – Gran Sasso Science Institute**: https://www.gssi.it/
