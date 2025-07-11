@@ -1,5 +1,5 @@
 
-Lauda Manuscript Codebase & OMR Learning Pipeline
+🎼 Lauda Manuscript Codebase & OMR Learning Pipeline
 
 This repository accompanies the learning experiments described in our IEEE MLSP 2025 paper:
 
